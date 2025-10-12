@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 12 KOD</title>
+</head>
+<body>
+<textarea  cols="100" rows="30" disabled> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 12</title>
+</head>
+<body>
+    <div style="color:green; font-size:31px;">
+        <script language="JavaScript">
+            var D1_sie = prompt("Podaj pierwszy dzień stycznia (D1):", "");
+            var G1_sie = prompt("Podaj godzinę dla pierwszego dnia (G1):", "");
+            var D2_sie = prompt("Podaj drugi dzień stycznia (D2):", "");
+            var G2_sie = prompt("Podaj godzinę dla drugiego dnia (G2):", "");
+            var d1 = parseInt(D1_sie);
+            var g1 = parseInt(G1_sie);
+            var d2 = parseInt(D2_sie);
+            var g2 = parseInt(G2_sie);
+            var sekundy1 = ((d1 - 1) * 24 * 60 * 60) + (g1 * 60 * 60);
+            var sekundy2 = ((d2 - 1) * 24 * 60 * 60) + (g2 * 60 * 60);
+            var roznica = Math.abs(sekundy1 - sekundy2);
+            document.write("Między dniem " + d1 + " godz. " + g1 + ":00 a dniem " + d2 + " godz. " + g2 + ":00 minęło " + roznica + " sekund.");
+        </script>
+    </div>
+</body>
+</html>
+</textarea>
+</body>
+</html>
