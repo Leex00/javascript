@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 22 KOD</title>
+</head>
+<body>
+<textarea  cols="100" rows="36" disabled> 
+<html>  
+<head>  
+<title> zadanie 22</title> 
+<script type="text/javascript">
+  function Pole_sieradzki(a_sie, b_sie) {
+    return a_sie * b_sie;
+  }
+  function obwod_sieradzki(a_sie, b_sie) {
+    return 2 * (a_sie + b_sie);
+  }
+  function pole() {
+    var a_sie = parseFloat(document.getElementById('a_dana_sie').value);
+    var b_sie = parseFloat(document.getElementById('b_dana_sie').value);
+    var pole = Pole_sieradzki(a_sie, b_sie);
+    document.getElementById("nazwa").innerHTML = "Pole prostokąta = " + pole.toFixed(2) + " cm²";
+    document.getElementById('wyprowadz_pole_sie').value = pole.toFixed(2);
+  }
+  function obwod() {
+    var a_sie = parseFloat(document.getElementById('a_dana_sie').value);
+    var b_sie = parseFloat(document.getElementById('b_dana_sie').value);
+    var obw = obwod_sieradzki(a_sie, b_sie);
+    document.getElementById("nazwa").innerHTML = "Obwód prostokąta = " + obw.toFixed(2) + " cm";
+    document.getElementById('wyprowadz_obwod_sie').value = obw.toFixed(2);
+  }
+</script>
+  <h1>Wszystko o PROSTOKĄCIE</h1><br><br>
+  Podaj długość a: <input type="text" id="a_dana_sie" value=""> cm<br><br>
+  Podaj długość b: <input type="text" id="b_dana_sie" value=""> cm<br><br>
+  <input type="button" name="pole" value="Oblicz pole" onclick="pole()"><br><br>
+  <input type="button" name="obw" value="Oblicz obwód" onclick="obwod()"><br><br>
+  <div style="color:red;font-size:50px;" id="nazwa"></div>
+  <br>
+</body>
+</html>
+</textarea>
+</body>
+</html>

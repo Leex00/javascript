@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zad 20 </title>
+</head>
+<body>
+  <h1>Trójkąt - długości boków</h1>
+  <form>
+    Punkt A: x = <input type="text" id="xa_sieradzki" value="0">
+    y = <input type="text" id="ya_sieradzki" value="0"><br><br>
+    Punkt B: x = <input type="text" id="xb_sieradzki" value="0">
+    y = <input type="text" id="yb_sieradzki" value="0"><br><br>
+    Punkt C: x = <input type="text" id="xc_sieradzki" value="0">
+    y = <input type="text" id="yc_sieradzki" value="0"><br><br>
+  </form>
+  <input type="button" value="Oblicz długości boków" onclick="obliczBoki()">
+  <div style="color:blue; font-size:30px;" id="wyniki"></div>
+  <script>
+    function AB_sie(xa, ya, xb, yb) {
+      return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+    }
+    function BC_sie(xb, yb, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+    }
+    function AC_sie(xa, ya, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+    }
+    function obliczBoki() {
+      var xa_sieradzki = parseFloat(document.getElementById('xa_sieradzki').value);
+      var ya_sieradzki = parseFloat(document.getElementById('ya_sieradzki').value);
+      var xb_sieradzki = parseFloat(document.getElementById('xb_sieradzki').value);
+      var yb_sieradzki = parseFloat(document.getElementById('yb_sieradzki').value);
+      var xc_sieradzki = parseFloat(document.getElementById('xc_sieradzki').value);
+      var yc_sieradzki = parseFloat(document.getElementById('yc_sieradzki').value);
+
+      var ab = AB_sie(xa_sieradzki, ya_sieradzki, xb_sieradzki, yb_sieradzki);
+      var bc = BC_sie(xb_sieradzki, yb_sieradzki, xc_sieradzki, yc_sieradzki);
+      var ac = AC_sie(xa_sieradzki, ya_sieradzki, xc_sieradzki, yc_sieradzki);
+
+      document.getElementById('wyniki').innerHTML =
+        "AB = " + ab.toFixed(2) + " <br>BC = " + bc.toFixed(2) + " <br>AC = " + ac.toFixed(2);
+    }
+  </script>
+</body>
+</html>

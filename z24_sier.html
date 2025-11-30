@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <head>
+ <title> zadanie 24 </title>
+ <meta charset="utf-8">
+ </head>
+<body>
+ <div style="color:blue;background-color:grey;font-size:50px;">
+ <script language="JavaScript">
+ var x1_sie=parseFloat(prompt("x1=",""));
+ var x2_sie=parseFloat(prompt("x2=",""));
+ function y1_sie(x1) {
+ return 3 * Math.pow(x1_sie, 5/7);
+}
+function x1_rad(x1) {
+var st_sie=x1_sie;
+return (st_sie * Math.PI) / 180;
+}
+function y2_sie(x1){
+var st_sie=x1_sie;
+var rad_sie=(st_sie * Math.PI) / 180;
+return 2 * Math.cos(rad_sie) + 3 * Math.sin(rad_sie);
+}
+function y3_sie(x1,x2) {
+var x1_5= Math.pow(x1_sie, 5);
+var x2_4= Math.pow(x2_sie, 4);
+var x1_x2= Math.abs(x1_sie - x2_sie);
+var pierwiastek= Math.cbrt(x1_5 + 2 * x2_4);
+return pierwiastek * x1_x2;
+}
+var y1_wyn =y1_sie(x1_sie);
+var y2_wyn =y2_sie(x1_sie);
+var y3_wyn =y3_sie(x1_sie,x2_sie);
+var x1_radi= x1_rad(x1_sie);
+document.write("x1= " +x1_sie+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"); 
+document.write("x2= " +x2_sie+"<br>");
+document.write("x1= " +x1_sie+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+document.write("x1= " +x1_radi.toFixed(2)+"<br>");
+document.write("y1= " +y1_wyn.toFixed(2)+"<br>");
+document.write("y2= " +y2_wyn.toFixed(2)+"<br>");
+document.write("y3= " +y3_wyn.toFixed(2)+"<br>");
+</script>
+</div>
+</body>
+</html>
