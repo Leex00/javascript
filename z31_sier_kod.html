@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 31 KOD</title>
+</head>
+<body>
+<textarea  cols="100" rows="54" disabled> 
+<html>
+<head>
+<script type="text/javascript">
+
+var autobus = {
+    ilu_pasazerow: 40,
+    kolor: 'niebieski',
+    marka: 'MAN',
+    autobus_wyswietl_sieradzki: function()
+    {
+        document.write(
+            'Liczba pasażerów: ' + this.ilu_pasazerow + '<br>' +
+            'Kolor autobusu: ' + this.kolor + '<br>' +
+            'Marka autobusu: ' + this.marka + '<br>'
+        );
+    }
+}
+
+autobus.autobus_wyswietl_sieradzki();
+autobus.numer_linii = 125;
+autobus.autobus_pokaz_sieradzki = function()
+{
+    document.write('Numer linii: ' + this.numer_linii + '<br>');
+    alert('Numer linii: ' + this.numer_linii)
+}
+
+autobus.autobus_pokaz_sieradzki();
+
+</script>
+</head>
+
+<body>
+<br>
+Programowanie obiektowe.<br>
+Obiekt to: Autobus<br><br>
+
+Pola:<br>
+ilu_pasazerow<br>
+kolor<br>
+marka<br><br>
+
+Metoda w obiekcie:<br>
+autobus_wyswietl_sieradzki<br><br>
+
+Nowe pole poza ciałem obiektu:<br>
+numer_linii<br><br>
+
+Nowa metoda poza ciałem obiektu:<br>
+autobus_pokaz_sieradzki<br>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 32 KOD</title>
+</head>
+<body>
+<textarea  cols="100" rows="79" disabled> 
+<html>
+<head>
+<script type="text/javascript">
+
+function autobus(ilu_pasazerow_a, kolor_a, marka_a, predkosc_a)
+{
+    this.ilu_pasazerow = ilu_pasazerow_a;
+    this.kolor = kolor_a;
+    this.marka = marka_a;
+    this.predkosc = predkosc_a;
+}
+
+autobus.prototype.autobus_wyswietl_sieradzki = function ()
+{
+    document.write(
+        'Autobus - ' +
+        this.ilu_pasazerow + ' pasażerów, ' +
+        this.kolor + ', ' +
+        this.marka + ', ' +
+        this.predkosc + ' km/h <br>'
+    );
+    alert(this.ilu_pasazerow + ' pasażerów, ' + this.kolor+ ', ' + this.marka+ ', ' +this.predkosc+ 'km/h,')
+};
+
+var autobus1 = new autobus(40,'czerwony','MAN',80);
+var autobus2 = new autobus(55,'niebieski','Solaris',70);
+var autobus3 = new autobus(30,'zielony','Mercedes',90);
+
+autobus1.numer_linii = 125;
+autobus2.numer_linii = 210;
+autobus3.numer_linii = 15;
+
+autobus.prototype.autobus_pokaz_sieradzki = function ()
+{
+    document.write('Numer linii: ' + this.numer_linii + '<br>');
+};
+
+document.write("<b>Dane autobusów (metoda prototypu):</b><br>");
+autobus1.autobus_wyswietl_sieradzki();
+autobus2.autobus_wyswietl_sieradzki();
+autobus3.autobus_wyswietl_sieradzki();
+
+document.write("<br><b>Dostęp do właściwości:</b><br>");
+document.write("Autobus1: "+autobus1.ilu_pasazerow+" "+autobus1.kolor+" "+autobus1.marka+" "+autobus1.predkosc+"<br>");
+document.write("Autobus2: "+autobus2.ilu_pasazerow+" "+autobus2.kolor+" "+autobus2.marka+" "+autobus2.predkosc+"<br>");
+document.write("Autobus3: "+autobus3.ilu_pasazerow+" "+autobus3.kolor+" "+autobus3.marka+" "+autobus3.predkosc+"<br>");
+
+document.write("<br><b>Nowa metoda poza obiektem:</b><br>");
+autobus1.autobus_pokaz_sieradzki();
+autobus2.autobus_pokaz_sieradzki();
+autobus3.autobus_pokaz_sieradzki();
+
+</script>
+</head>
+
+<body>
+<br>
+Programowanie obiektowe<br><br>
+
+Nazwa obiektu: Autobus<br><br>
+
+Pola:<br>
+ilu_pasazerow<br>
+kolor<br>
+marka<br>
+predkosc<br><br>
+
+Metoda (prototyp): autobus_wyswietl_sieradzki<br>
+Nowe pole poza obiektem: numer_linii<br>
+Nowa metoda poza obiektem: autobus_pokaz_sieradzki<br>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>
