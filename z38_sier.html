@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sieradzki Z38_JS</title>
+    <style>
+        .a { color: red; font-size: 1cm; text-align: center; }
+        .b { color: green; font-size: 12mm; }
+        .c { color: blue; font-size: 50px; }
+        
+        #demo_sieradzki {
+            color: red;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">Sieradzki</div><br>
+    <div class="b"> Pojęcie rozdzielczość ekranu/monitora oznacza liczbę pikseli wyświetlanych na ekranie w poziomie i pionie</div><br>
+    <div class="c"> Pojęcie szerokość/wysokość ekranu przeglądarki w pikselach oznacza obszar roboczy wyświetlania strony. </div><br>
+
+    <p id="demo_sieradzki"></p>
+
+    <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        
+        var x = document.getElementById("demo_sieradzki");
+        
+        x.innerHTML = "szerokość przeglądarki: " + w + ", wysokość: " + h + ".";
+ document.write("<font color=silver size=6>Twoja rozdzielczość ekranu to:</font>");
+ document.write("<font color=silver size=6>"+screen.width+"</font>");
+ document.write("<font color=silver size=6> na </font>");
+ document.write("<font color=silver size=6>"+screen.height+"</font>");
+
+    </script>
+</body>
+</html>

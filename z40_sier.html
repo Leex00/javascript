@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Sieradzki Z40_JS</title> 
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+    <script language="JavaScript">
+        var x = prompt("podaj argument x=", "");
+        var x_sie = parseFloat(x);
+        document.write("wykonał Tomasz Sieradzki<br>");
+        document.write("czytany argument x=" + x_sie.toFixed(2) + "<br>");
+        function f_sie(x_sie) {
+            if (x_sie >= 2) { 
+                return 9; 
+            }
+
+            else if (x_sie >= 0 && x_sie < 2) { 
+                return Math.pow(x_sie, 3) + 1; 
+            }
+
+            else if (x_sie > -2 && x_sie < 0) { 
+                return Math.pow(x_sie + 1, 2); 
+            }
+
+            else { 
+                return 1; 
+            }
+        }
+
+        var wynik = f_sie(x_sie);
+        document.write("f(" + x_sie.toFixed(2) + ")=" + wynik.toFixed(2) + "<br>");
+    </script>
+</div>
+</body>
+</html>
+<!-- Sieradzki Z40_JS -->
